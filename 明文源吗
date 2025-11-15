@@ -134,7 +134,7 @@
         }
         
         try {
-            const configData = await kvStore.get('c');
+            const configData = await kvStore.get('hk');
             
             if (configData) {
                 kvConfig = JSON.parse(configData);
@@ -152,7 +152,7 @@
         
         try {
             const configString = JSON.stringify(kvConfig);
-            await kvStore.put('c', configString);
+            await kvStore.put('hk', configString);
         } catch (error) {
             throw error; 
         }
